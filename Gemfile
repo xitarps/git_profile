@@ -34,6 +34,8 @@ group :development, :test do
 
   gem 'rspec-rails', "~> 5.1.2"
   gem "capybara", "~> 3.37.1"
+
+  gem 'simplecov', "~> 0.21.2"
 end
 
 group :development do
