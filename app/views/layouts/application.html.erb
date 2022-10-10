@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GitProfile</title>
+    <title>Git Profile</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,12 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class='bg-dark text-white'>
+    <%= render 'shared/navbar' %>
+    <div class='d-flex h-100 align-items-center justify-content-center row bg'>
+      <main class='col-11 col-md-10 col-lg-10 p-5 mt-5 mb-5 bg-white text-dark rounded'>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>
