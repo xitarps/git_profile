@@ -1,0 +1,6 @@
+pt-BR:
+  shared:
+    navbar:
+      home: 'Início'
+      add_git_profile: 'Adicionar perfil'
+      search: 'Busca'
