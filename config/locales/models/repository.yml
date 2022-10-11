@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      repository:
+        one: 'Repositório'
+        other: 'Repositórios'
+    errors:
+      models:
+        repository:
+          attributes:
+            url:
+              error: 'formato inválido'

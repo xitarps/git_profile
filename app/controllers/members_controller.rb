@@ -5,10 +5,12 @@ class MembersController < ApplicationController
   before_action :fetch_member, only: %i[show edit update destroy]
   def new
     @member = Member.new
+    @member.repositories.build
   end
 
   def create
     @member = Member.new(member_params)
+
     return redirect_to @member, notice: build_notice(act: 'created', model: @member) if @member.save
 
     flash.now[:alert] = @member.errors.full_messages.to_sentence
@@ -33,7 +35,7 @@ class MembersController < ApplicationController
   private
 
   def member_params
-    params.require(:member).permit(:name)
+    params.require(:member).permit(:name, repositories_attributes: %i[url])
   end
 
   def fetch_member
