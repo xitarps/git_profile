@@ -1,6 +1,7 @@
 pt-BR:
   edit: 'Editar'
   new: 'Criar'
+  destroy: 'Apagar'
   show: 'Detalhes de '
   activerecord:
     successful:

@@ -4,6 +4,16 @@ pt-BR:
       repository:
         one: 'Repositório'
         other: 'Repositórios'
+    attributes:
+      repository:
+        user_name: 'Nome de usuário'
+        user_nickname: 'Apelido de usuário'
+        followers: 'Seguidores'
+        following: 'Seguindo'
+        stars: 'Estrelas'
+        last_year_contrib: 'Contribuições do último ano'
+        location: 'Localização'
+        organization: 'Organização'
     errors:
       models:
         repository:
