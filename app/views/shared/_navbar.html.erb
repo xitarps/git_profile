@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="/"><%= t '.home' %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><%= t '.add_git_profile' %></a>
+          <%= link_to t('.add_git_profile'), new_member_path ,class: "nav-link active" %>
         </li>
       </ul>
       <form class="d-flex" role="search">

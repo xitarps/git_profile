@@ -1,0 +1,10 @@
+<%= form_with model: member, local: true do |f| %>
+  <div>
+    <%= f.label :name, member.class.human_attribute_name(:name) %>
+    <p>
+      <%= f.text_field :name %>
+    </p>
+  </div>
+
+  <%= f.submit %>
+<% end %>
