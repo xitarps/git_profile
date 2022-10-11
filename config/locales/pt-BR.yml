@@ -1,5 +1,13 @@
 pt-BR:
+  edit: 'Editar'
+  new: 'Criar'
+  show: 'Detalhes de '
   activerecord:
+    successful:
+      messages:
+        created: '%{model} salvo'
+        updated: '%{model} atualizado'
+        destroyed: '%{model} apagado'
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

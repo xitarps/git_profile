@@ -1,0 +1,11 @@
+<h2><%= t("#{action_name}") %> <%= @member.model_name.human %></h2>
+
+
+<p>
+  <%= @member.class.human_attribute_name(:name) %>: <%= @member.name %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_member_path(@member) %> | 
+  <%= link_to 'Destroy', member_path(@member), method: :delete %>
+</p>

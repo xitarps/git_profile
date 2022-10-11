@@ -1,0 +1,7 @@
+pt-BR:
+  activerecord:
+    models:
+      member: 'Membro'
+    attributes:
+      member:
+        name: Nome
