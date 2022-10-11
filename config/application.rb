@@ -27,6 +27,9 @@ module GitProfile
     config.time_zone = 'America/Fortaleza'
     config.i18n.default_locale = :'pt-BR'
 
+    # load the subfolders in the locales
+    config.i18n.load_path += Dir["#{Rails.root.to_s}/config/locales/**/*.{rb,yml}"]
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
