@@ -14,8 +14,10 @@
     <%= render 'shared/navbar' %>
     <div class='d-flex h-100 align-items-center justify-content-center row bg'>
       <main class='col-11 col-md-10 col-lg-10 p-5 mt-5 mb-5 bg-white text-dark rounded'>
-        <%= render 'shared/messages' %>
-        <%= yield %>
+        <div class="d-flex flex-column justify-content-end align-items-center">
+          <%= render 'shared/messages' %>
+          <%= yield %>
+        </div>
       </main>
     </div>
   </body>

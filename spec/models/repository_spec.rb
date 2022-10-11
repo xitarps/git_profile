@@ -14,8 +14,15 @@ RSpec.describe Repository, type: :model do
 
   context 'when url is present' do
     it 'should save successfully' do
-      repository.url = 'https://github.com/teste'
+      repository.url = 'https://github.com/xitarps'
       expect(repository).to be_valid
+    end
+  end
+
+  context 'when update url' do
+    it 'should not have doubled repositories' do
+      repository.update(url: 'https://github.com/matz')
+      expect(described_class.count).to be_eql(1)
     end
   end
 end
