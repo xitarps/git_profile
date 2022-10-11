@@ -4,4 +4,4 @@ pt-BR:
       member: 'Membro'
     attributes:
       member:
-        name: Nome
+        name: 'Nome'

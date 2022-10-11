@@ -1,10 +1,20 @@
-<%= form_with model: member, local: true do |f| %>
+<%= form_with model: member, local: true do |form| %>
   <div>
-    <%= f.label :name, member.class.human_attribute_name(:name) %>
+    <%= form.label :name, member.class.human_attribute_name(:name) %>
     <p>
-      <%= f.text_field :name %>
+      <%= form.text_field :name %>
     </p>
   </div>
 
-  <%= f.submit %>
+  <%= form.fields_for :repositories, member.repositories do |repository_form| %>
+    <div>
+      <%= repository_form.label :url, 'URL' %>
+      <p>
+        <%= repository_form.text_field :url %>
+      </p>
+    </div>
+  <% end %>
+
+
+  <%= form.submit %>
 <% end %>

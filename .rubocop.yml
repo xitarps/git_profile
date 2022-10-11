@@ -189,6 +189,8 @@ Style/StringChars: # new in 1.12
   Enabled: true
 Style/SwapValues: # new in 1.1
   Enabled: true
+Style/RegexpLiteral:
+  Enabled: false
 Rails/ActionControllerFlashBeforeRender: # new in 2.16
   Enabled: true
 Rails/ActionControllerTestCase: # new in 2.14
