@@ -17,13 +17,16 @@ class MembersController < ApplicationController
     render :new
   end
 
-  def show; end
+  def show
+    @repository = @member.repositories.first
+  end
 
   def edit; end
 
   def update
     return redirect_to @member, notice: build_notice(act: 'updated', model: @member) if @member.update(member_params)
 
+    @member.repositories = [@member.repositories.first] if @member.repositories.any?
     flash.now[:alert] = @member.errors.full_messages.to_sentence
     render :edit
   end

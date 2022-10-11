@@ -2,10 +2,37 @@
 
 
 <p>
-  <%= @member.class.human_attribute_name(:name) %>: <%= @member.name %>
+  <%= @member.class.human_attribute_name(:name) %>: <strong><%= @member.name %></strong>
+</p>
+
+<img class="avatar" src="<%= @repository.avatar %>" alt="">
+
+<p>
+  <%= @repository.class.human_attribute_name(:user_name) %>: <strong><%= @repository.user_name %></strong>
+</p>
+<p>
+  <%= @repository.class.human_attribute_name(:user_nickname) %>: <strong><%= @repository.user_nickname %></strong>
+</p>
+<p>
+  <%= @repository.class.human_attribute_name(:followers) %>: <strong><%= @repository.followers %></strong>
+</p>
+<p>
+  <%= @repository.class.human_attribute_name(:following) %>: <strong><%= @repository.following %></strong>
+</p>
+<p>
+  <%= @repository.class.human_attribute_name(:stars) %>: <strong><%= @repository.stars %></strong>
+</p>
+<p>
+  <%= @repository.class.human_attribute_name(:last_year_contrib) %>: <strong><%= @repository.last_year_contrib %></strong>
+</p>
+<p>
+  <%= @repository.class.human_attribute_name(:location) %>: <strong><%= @repository.location %></strong>
+</p>
+<p>
+  <%= @repository.class.human_attribute_name(:organization) %>: <strong><%= @repository.organization %></strong>
 </p>
 
 <p>
-  <%= link_to 'Edit', edit_member_path(@member) %> | 
-  <%= link_to 'Destroy', member_path(@member), method: :delete %>
+  <%= link_to t(:edit), edit_member_path(@member) %> | 
+  <%= link_to t(:destroy), member_path(@member), method: :delete %>
 </p>
