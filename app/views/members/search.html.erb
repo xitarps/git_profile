@@ -1,0 +1,7 @@
+<h2><%= t("#{action_name}") %></h2>
+
+<% if @members.any? %>
+  <div class="d-flex align-items-start justify-content-center row">
+    <%= render @members %>
+  </div>
+<% end %>

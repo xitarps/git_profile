@@ -3,6 +3,7 @@ pt-BR:
   new: 'Criar'
   destroy: 'Apagar'
   show: 'Detalhes de '
+  search: 'Busca'
   activerecord:
     successful:
       messages:
