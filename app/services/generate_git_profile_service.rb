@@ -22,6 +22,9 @@ class GenerateGitProfileService
   end
 
   def open_url(url)
+    res = Net::HTTP.get_response(URI url)
+    url = 'https://github.com' if res.code == '404'
+
     URI.parse(url).open
   end
 
@@ -41,8 +44,8 @@ class GenerateGitProfileService
   end
 
   def fetch_aditional_data
-    { stars: @doc.css('[data-tab-item="stars"]')&.css('.Counter')&.first.text,
+    { stars: @doc.css('[data-tab-item="stars"]')&.css('.Counter')&.first&.text,
       last_year_contrib: @doc.css('.js-yearly-contributions')&.css('.f4')&.text.split.first,
-      avatar: @doc.css('.avatar-user')&.css('.width-full')&.last.attributes['src'].value }
+      avatar: @doc.css('.avatar-user')&.css('.width-full')&.last&.attributes&.fetch('src', nil)&.value }
   end
 end
