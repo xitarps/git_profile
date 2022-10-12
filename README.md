@@ -12,6 +12,9 @@ This project(GIT Profile) aims on create a Github profile search tool
 
 - Should be possible to search for users
 
+### Heroku (Live app)
+
+https://git-profile-application.herokuapp.com/
 
 <details>
   <summary>
