@@ -21,7 +21,7 @@ https://git-profile-application.herokuapp.com/
      Technologies
   </summary>
 
-  - Ruby 3.0.3
+  - Ruby 3.1.2
   - Rails
   - Postgres
   - Rubocop
