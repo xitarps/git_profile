@@ -287,3 +287,15 @@ Rails/WhereMissing: # new in 2.16
   Enabled: true
 Rails/WhereNot: # new in 2.8
   Enabled: true
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Exclude:
+    - 'app/services/generate_git_profile_service.rb'
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Exclude:
+    - 'app/services/generate_git_profile_service.rb'
+Metrics/Metrics/AbcSize:
+  Enabled: true
+  Exclude:
+    - 'app/services/generate_git_profile_service.rb'
