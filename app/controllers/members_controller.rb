@@ -35,10 +35,20 @@ class MembersController < ApplicationController
     redirect_to root_path, notice: build_notice(act: 'destroyed', model: @member) if @member.destroy
   end
 
+  def search
+    members = Member.find_with_any_column(search_params[:arg])
+    repositories = Repository.find_with_any_column(search_params[:arg])
+    @members = (members + repositories.map(&:member)).uniq
+  end
+
   private
 
   def member_params
     params.require(:member).permit(:name, repositories_attributes: %i[url])
+  end
+
+  def search_params
+    params.require(:search).permit(:arg)
   end
 
   def fetch_member

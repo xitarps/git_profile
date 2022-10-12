@@ -13,10 +13,14 @@
           <%= link_to t('.add_git_profile'), new_member_path ,class: "nav-link active" %>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="<%= t '.search' %>" aria-label="<%= t '.search' %>">
-        <button class="btn btn-outline-success" type="submit"><%= t '.search' %></button>
-      </form>
+
+      <%= form_with id: 'search_field', class: 'd-flex', url: search_members_path, local: true, method: :get do |f| %>
+        <%= fields_for :search do |search_field| %>
+          <%= search_field.text_field :arg, class: 'form-control me-2', placeholder: t('.search') %>
+          <%= search_field.submit t('.search'), class: 'btn btn-outline-success', disable_with: 'Submiting...' %>
+        <% end %>
+      <% end %>
+
     </div>
   </div>
 </nav>

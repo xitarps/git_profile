@@ -1,0 +1,5 @@
+<div class="my-1">
+  <img class="avatar_thumb" src="<%= member.repositories.first.avatar %>" alt="">
+  <%= link_to "#{Member.model_name.human}: #{member.name}", member %> | 
+  <%= link_to Repository.model_name.human, member.repositories.first.url %>
+</div>

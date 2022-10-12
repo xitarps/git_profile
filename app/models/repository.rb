@@ -2,6 +2,8 @@
 
 # Repository model layer
 class Repository < ApplicationRecord
+  include Searchable
+
   belongs_to :member
 
   validates :url, presence: true
