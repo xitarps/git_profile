@@ -22,7 +22,7 @@ class GenerateGitProfileService
   end
 
   def open_url(url)
-    res = Net::HTTP.get_response(URI url)
+    res = Net::HTTP.get_response(URI(url))
     url = 'https://github.com' if res.code == '404'
 
     URI.parse(url).open

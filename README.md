@@ -110,4 +110,5 @@ https://trello.com/b/Fw1PPZAB/gitprofile
  - Add url shortner
  - Add more unit tests
  - Enable multi repos for members(ex: gitlab etc)
+ - Set on demand reload git profile infos
 </details>
