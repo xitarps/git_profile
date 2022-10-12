@@ -30,6 +30,10 @@ module GitProfile
     # load the subfolders in the locales
     config.i18n.load_path += Dir["#{Rails.root.to_s}/config/locales/**/*.{rb,yml}"]
 
+    # Ngrok
+    # config.hosts << "a3c8-187-34-197-181.ngrok.io" if Rails.env.development?
+    config.hosts << /[a-z0-9-]+\.ngrok\.io/ if Rails.env.development?
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
